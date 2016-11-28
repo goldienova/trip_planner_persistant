@@ -23,18 +23,21 @@ $(function(){
   $.get('/api/hotels')
   .then(function (hotels) {
     hotels.forEach(makeOption, $hotelSelect);
+    enhanced.hotels = hotels.map(attractionModule.create);
   })
   .catch( console.error.bind(console) );
 
   $.get('/api/restaurants')
   .then(function (restaurants) {
     restaurants.forEach(makeOption, $restaurantSelect);
+    enhanced.restaurants = restaurants.map(attractionModule.create);
   })
   .catch( console.error.bind(console) );
 
   $.get('/api/activities')
   .then(function (activities) {
     activities.forEach(makeOption, $activitySelect);
+    enhanced.activities = activities.map(attractionModule.create);
   })
   .catch(console.error.bind(console) );
 

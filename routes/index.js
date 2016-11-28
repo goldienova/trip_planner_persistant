@@ -4,10 +4,10 @@ var Hotel = require('../models/hotel');
 var Restaurant = require('../models/restaurant');
 var Activity = require('../models/activity');
 var attractions = require('../routes/api/attractions');
-var days = require('../routes/api/days');
+
 
 router.use('/api', attractions);
-router.use('/days', days);
+
 
 router.get('/', function(req, res, next) {
   Promise.all([

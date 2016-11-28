@@ -4,6 +4,11 @@ var router = express.Router();
 var Hotel = require('../../models/hotel');
 var Restaurant = require('../../models/restaurant');
 var Activity = require('../../models/activity');
+var Days = require('./days');
+
+
+router.use('/days', Days);
+
 
 router.get('/hotels', function(req, res, next){
 	Hotel.findAll()

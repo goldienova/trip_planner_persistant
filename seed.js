@@ -74,6 +74,9 @@ db.sync({force: true})
     });
   });
 })
+.then(function(){
+  return db.model('day').create({number: 1});
+})
 .then(function () {
   console.log("Finished inserting data");
 })
