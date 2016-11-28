@@ -14,6 +14,7 @@ router.get('/hotels', function(req, res, next){
 	
 });
 
+
 router.get('/restaurants', function(req, res, next){
 	Restaurant.findAll()
 	.then(function(restaurants){
